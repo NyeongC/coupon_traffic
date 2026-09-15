@@ -1,4 +1,4 @@
-package com.apice.coupon
+package com.apiece.coupon
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
