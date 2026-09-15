@@ -14,7 +14,17 @@ import java.time.LocalDateTime
 
 @Entity
 @Table(
-    name = "issuance"
+    name = "issuance",
+    uniqueConstraints = [
+        UniqueConstraint(
+            name = "uk_issuance_user_coupon",
+            columnNames = ["user_id", "coupon_id"],
+        ),
+    ],
+    indexes = [
+        Index(name = "idx_issuance_status", columnList = "status"),
+        Index(name = "idx_issuance_coupon", columnList = "coupon_id"),
+    ],
 )
 class Issuance(
     @Column(name = "user_id", nullable = false)

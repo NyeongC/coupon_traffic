@@ -1,6 +1,6 @@
 package com.apiece.coupon.domain;
 
-public enum IssuanceStatus {
+enum class IssuanceStatus {
     ISSUED,
     USED,
     EXPIRED,
